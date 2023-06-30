@@ -1,0 +1,67 @@
+recipeSchema example
+
+{
+    "username":"avs",
+    "recipeId":1,
+    "recipeName":"Boiled Potato",
+    "recipeIn":{
+        "ingredients":[{
+            "ingredientName":"potato",
+            "ingredientQuantity":2
+        }],
+        "directions":"boil potato"
+    },
+    "date":"29 June 23",
+    "publicAccess":true
+}
+
+
+
+Update
+
+{
+    "recipeName":"Boiled Carrot",
+    "recipeIn":{
+        "ingredients":[{
+            "ingredientName":"Carrot",
+            "ingredientQuantity":2
+        }],
+        "directions":"boil carrot"
+    },
+    "date":"30 June 23",
+    "publicAccess":false
+}
+
+
+
+
+
+
+
+login
+
+{
+    "username":"avs",
+    "password":"54321"
+}
+
+
+
+
+ADD NEW
+
+{
+    "recipeId": 2,
+    "recipeName": "Scrambled Eggs",
+    "recipeIn": {
+        "ingredients": [
+            {
+                "ingredientName": "Eggs",
+                "ingredientQuantity": "2"
+            }
+        ],
+        "directions": "Heat up the pan and fry eggs"
+    },
+    "date": "30 June 23",
+    "publicAccess": true
+}

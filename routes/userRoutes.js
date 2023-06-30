@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
 
+
 const router = express.Router();
 
 router.post('/signup', async (req, res) => {
@@ -39,13 +40,24 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid username or password' });
     }
 
-    // Generate a session token or JWT and send it in the response
-    // For session-based authentication, you can use `express-session`
+    req.session.username = user.username;
 
     res.json({ message: 'Login successful' });
   } catch (error) {
     res.status(500).json({ error: 'An error occurred' });
   }
 });
+
+
+router.post('/logout',(req,res)=> {
+    req.session.destroy((err)=>{
+        if(err) {
+            console.log(err);
+            return res.status(500).send("Internal Server Error");
+        }
+
+        res.send("Logged out successfully");
+    })
+})
 
 module.exports = router;
