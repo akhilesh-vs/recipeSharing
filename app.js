@@ -12,7 +12,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Connect to MongoDB Atlas (replace <YOUR_CONNECTION_STRING> with your actual connection string)
-mongoose.connect('mongodb+srv://luffy:luffy@recipenew.ovgxf5p.mongodb.net/', {
+mongoose.connect('<YOUR_CONNECTION_STRING>', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
