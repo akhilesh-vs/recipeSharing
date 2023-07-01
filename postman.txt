@@ -65,3 +65,14 @@ ADD NEW
     "date": "30 June 23",
     "publicAccess": true
 }
+
+
+
+
+Angular
+
+1. Create listing statically
+2. Make the listing dynamic
+3. Populate the listing
+4. Pipe functionality will be added to distance field
+5. Connect to API
